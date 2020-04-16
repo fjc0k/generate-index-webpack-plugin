@@ -1,0 +1,71 @@
+{
+  "name": "generate-index-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Bring VSCode extension \"Generate Index\" to webpack.",
+  "homepage": "https://github.com/fjc0k/generate-index-webpack-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/fjc0k/generate-index-webpack-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjc0k/generate-index-webpack-plugin.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jay Fong",
+    "email": "fjc0kb@gmail.com",
+    "url": "https://github.com/fjc0k"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rimraf lib && tsc -p tsconfig.build.json",
+    "dev": "rimraf lib && tsc -p tsconfig.build.json -w",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version -a && git push --follow-tags origin master && npm publish"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,less,scss,sass,html,htm,vue,yml,yaml,json,md}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.test.ts",
+      "!src/**/__*__/**/*"
+    ],
+    "globals": {
+      "ts-jest": {
+        "packageJson": "./package.json"
+      }
+    },
+    "preset": "ts-jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^25",
+    "codecov": "^3",
+    "eslint": "^6",
+    "haoma": "^1.8.0",
+    "husky": "^4",
+    "jest": "^25",
+    "lint-staged": "^10",
+    "prettier": "^2",
+    "rimraf": "^3.0.2",
+    "standard-version": "^7.1.0",
+    "ts-jest": "^25",
+    "typescript": "^3"
+  }
+}
