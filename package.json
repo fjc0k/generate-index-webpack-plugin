@@ -55,7 +55,7 @@
     "preset": "ts-jest"
   },
   "dependencies": {
-    "vscode-generate-index-standalone": "^1.1.0"
+    "vscode-generate-index-standalone": "^1.1.1"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.1.0",
