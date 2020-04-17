@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "ESNext",
-    "module": "ESNext",
+    "target": "ES2018",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "declaration": true,
     "removeComments": false,
@@ -12,13 +12,9 @@
     "skipLibCheck": true,
     "sourceMap": false,
     "preserveSymlinks": true,
-    "incremental": true,
-    "tsBuildInfoFile": "./node_modules/.cache/tsbif",
     "newLine": "LF",
-    "jsx": "react",
-    "lib": [
-      "esnext",
-      "dom"
-    ]
+    "outDir": "lib",
+    "baseUrl": ".",
+    "lib": ["ES2018"]
   }
 }

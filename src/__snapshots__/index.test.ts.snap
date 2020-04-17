@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`run: eval dist/main.js 1`] = `
+Object {
+  "a": 100,
+  "ddd": "dddd",
+  "imgButtonRed": Object {},
+  "imgHome": Object {},
+  "imgLogo": Object {},
+}
+`;
+
+exports[`run: src/assets/index.js 1`] = `
+"// @index('./*', (f, _) => \`export { default as img\${_.pascalCase(f.name)} } from '\${f.path}\${f.ext}'\`)
+export { default as imgButtonRed } from './button-red.jpg'
+export { default as imgHome } from './home.png'
+export { default as imgLogo } from './logo.svg'
+// @endindex
+"
+`;
+
+exports[`run: src/index.js 1`] = `
+"// @index(['./*', '!./dist'], f => \`export * from '\${f.path}'\`)
+export * from './_ddllds'
+export * from './a'
+export * from './assets'
+// @endindex
+"
+`;
+
+exports[`watch-run: <1> eval dist/main.js 1`] = `
+Object {
+  "a": 100,
+  "ddd": "dddd",
+  "imgButtonRed": Object {},
+  "imgHome": Object {},
+  "imgLogo": Object {},
+}
+`;
+
+exports[`watch-run: <1> src/assets/index.js 1`] = `
+"// @index('./*', (f, _) => \`export { default as img\${_.pascalCase(f.name)} } from '\${f.path}\${f.ext}'\`)
+export { default as imgButtonRed } from './button-red.jpg'
+export { default as imgHome } from './home.png'
+export { default as imgLogo } from './logo.svg'
+// @endindex
+"
+`;
+
+exports[`watch-run: <1> src/index.js 1`] = `
+"// @index(['./*', '!./dist'], f => \`export * from '\${f.path}'\`)
+export * from './_ddllds'
+export * from './a'
+export * from './assets'
+// @endindex
+"
+`;
+
+exports[`watch-run: <2> eval dist/main.js 1`] = `
+Object {
+  "a": 100,
+  "ddd": "dddd",
+  "hello": "ok",
+  "imgButtonRed": Object {},
+  "imgHome": Object {},
+  "imgLogo": Object {},
+}
+`;
+
+exports[`watch-run: <2> src/assets/index.js 1`] = `
+"// @index('./*', (f, _) => \`export { default as img\${_.pascalCase(f.name)} } from '\${f.path}\${f.ext}'\`)
+export { default as imgButtonRed } from './button-red.jpg'
+export { default as imgHome } from './home.png'
+export { default as imgLogo } from './logo.svg'
+// @endindex
+"
+`;
+
+exports[`watch-run: <2> src/index.js 1`] = `
+"// @index(['./*', '!./dist'], f => \`export * from '\${f.path}'\`)
+export * from './_ddllds'
+export * from './a'
+export * from './assets'
+export * from './hello'
+// @endindex
+"
+`;
