@@ -1,6 +1,6 @@
 {
   "name": "generate-index-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bring VSCode extension \"Generate Index\" to webpack.",
   "homepage": "https://github.com/fjc0k/generate-index-webpack-plugin#readme",
   "bugs": {
